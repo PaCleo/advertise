@@ -1,0 +1,110 @@
+.body {
+    background-color: #414040;
+    color: white;
+    align-items: center;
+}
+
+.max-limit {
+    width: 100%;
+    max-width: 1080px;
+    margin: 100px 400px;
+}
+
+.add {
+    font-size: 20px;
+
+}
+
+.add button {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    border: 2px solid blueviolet;
+    padding: 10px 45px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.add-header {
+    display: flex;
+    font-size: 20px;
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(178, 120, 231);
+}
+
+.pic {
+    width: 100px;
+    height: 50px;
+}
+
+
+
+.title {
+    width: 500px;
+}
+
+.price {
+    width: 200px;
+}
+
+.state{
+    width: 100px;
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+}
+
+.product-row:nth-child(even) {
+    background-color: #ccc;
+    color: black;
+}
+
+.product-row:nth-child(odd) {
+    background-color: gray;
+    color: white;
+}
+
+.edit {
+    align-items: center;
+    border: 2px solid blueviolet;
+    padding: 10px 10px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    color: black;
+    background-color: gainsboro;
+}
+
+.remove {
+    align-items: center;
+    border: 2px solid blueviolet;
+    padding: 10px 10px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(255, 0, 0);
+}
+
+@media screen and (max-width: 1280px){
+    .max-limit{
+        margin: 50px 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .max-limit {
+        margin: 10px 0px;
+    }
+    .pic{
+        display: none;
+    }
+    .title{
+        width: 400px;
+    }
+}

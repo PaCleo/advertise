@@ -1,0 +1,59 @@
+.edit-page {
+    background-color: #414040;
+    color: #ccc;
+    align-items: center;
+}
+
+.box h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.box input {
+    width: 1080px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    margin-top: 5px;
+}
+
+.box h4 {
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box select {
+    height: 30px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    margin-top: 5px;
+}
+
+.editbutton {
+    display: flex;
+    border: 2px solid rgb(160, 42, 115);
+    padding: 10px 45px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.success-message {
+    color: green;
+    padding: 10px;
+    text-align: center;
+}
+
+.unsuccess-message {
+    color: red;
+    padding: 10px;
+    text-align: center;
+}

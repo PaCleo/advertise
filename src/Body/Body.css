@@ -1,0 +1,19 @@
+.search button {
+    margin-top: 8px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    border: 2px solid blueviolet;
+    padding: 10px 45px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.advancedsearch {
+    display: flex;
+}
+.picbox{
+    width: 200px;
+}
