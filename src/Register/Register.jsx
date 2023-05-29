@@ -12,12 +12,12 @@ function Register() {
 
     const register = () => {
         try {
-            Axios.post("http://localhost:3002/auth/register", {
+            Axios.post("http://15.229.4.24:3002/auth/register/", {
                 name: nameReg,
                 password: PasswordReg,
 
             }); 
-            window.location.href = "http://pactech-advertise.s3-website-sa-east-1.amazonaws.com/";
+            window.location.href = "advertise.pactech.dev.br/Login";
         } catch(err) {
                 onsole.log(err);
                 setError('Failed to remove product');

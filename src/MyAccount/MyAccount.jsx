@@ -8,7 +8,7 @@ export default function MyAccount() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
-  const baseUrl = 'http://localhost:3002'
+  const baseUrl = 'http://15.229.4.24:3002'
 
   useEffect(() => {
     async function fetchData() {

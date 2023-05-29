@@ -16,7 +16,7 @@ function Body() {
     async function handleSearch() {
         console.log(selectPrice, selectProduct, selectState);
         try {
-            const response = await Axios.get('http://localhost:3002/add/getproduct', {
+            const response = await Axios.get('http://15.229.4.24:3002/add/getproduct', {
                 headers: {
                     Authorization: token,
                 },

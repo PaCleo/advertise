@@ -22,7 +22,7 @@ function Login() {
     const signIn = async e => {
         e.preventDefault();
         if (!cachedUser) {
-            const response = await Axios.post("http://localhost:3002/auth/login", {
+            const response = await Axios.post("http://15.229.4.24:3002/auth/login", {
                 name: name,
                 password: Password
             }).then((response) => {

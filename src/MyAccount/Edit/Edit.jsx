@@ -13,7 +13,7 @@ function Edit() {
     const token = localStorage.getItem('token');
     const [successMsg, setSuccessMsg] = useState("");
     const [unsuccesMsg, setUnsuccesMsg] = useState("");
-    const baseURL = "http://localhost:3002"
+    const baseURL = "http://15.229.4.24:3002"
 
     useEffect(() => {
         async function getProduct() {
@@ -54,7 +54,7 @@ function Edit() {
             formData.append('image', image);
 
             const response = await Axios.patch(
-                `http://localhost:3002/add/product/${id}`,
+                `http://15.229.4.24:3002/add/product/${id}`,
                 formData,
                 { headers: { Authorization: token } }
             );

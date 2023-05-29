@@ -10,7 +10,7 @@ function Add() {
     const cachedToken = localStorage.getItem('token');
     const [successMsg, setSuccessMsg] = useState("");
     const [unsuccessMsg, setUnsuccessMsg] = useState("");
-    const baseURL = "http://localhost:3002"
+    const baseURL = "http://15.229.4.24:3002"
 
     const register = async (e) => {
         e.preventDefault();
