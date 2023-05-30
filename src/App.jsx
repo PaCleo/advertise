@@ -7,7 +7,7 @@ import Register from './Register/Register.jsx';
 import MyAccount from './MyAccount/MyAccount.jsx';
 import Add from './MyAccount/Add/Add.jsx';
 import Edit from './MyAccount/Edit/Edit.jsx';
-
+import Footer from './Footer/Footer.jsx'
 
 function App() {
   return (
@@ -15,17 +15,17 @@ function App() {
       <div className="App">
         <Routes>
 
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<><Login /> <Footer/> </>} />
 
-          <Route path='/' element={<><Header /> <Body /></>} />
+          <Route path='/' element={<><Header /> <Body /> <Footer/> </>} />
 
-          <Route path='/register' element={<Register />} />
+          <Route path='/register' element={<><Register /> <Footer/> </>} />
 
-          <Route path='/myaccount' element={[<><Header /> <MyAccount /></>]} />
+          <Route path='/myaccount' element={[<><Header /> <MyAccount /> <Footer/> </>]} />
 
-          <Route path='/add-advertise' element={[<><Header /> <Add /></>]} />
+          <Route path='/add-advertise' element={[<><Header /> <Add /> <Footer/> </>]} />
 
-          <Route path='/edit-advertisement/:id' element={[<><Header/><Edit/></>]}/>
+          <Route path='/edit-advertisement/:id' element={[<><Header/><Edit/> <Footer/> </>]}/>
 
         </Routes>
       </div>

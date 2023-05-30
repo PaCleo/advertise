@@ -37,7 +37,8 @@
 
 .editbutton {
     display: flex;
-    border: 2px solid rgb(160, 42, 115);
+    border: 2px solid;
+    border-color: blueviolet;
     padding: 10px 45px;
     font-weight: 600;
     border-radius: 25px;
@@ -56,4 +57,28 @@
     color: red;
     padding: 10px;
     text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    .box input{
+        width: 692px;
+    }
+    .box input, .box select{
+        margin-left: 34px;
+        margin-right: 34px;
+    }
+    .box h4{
+        text-align: center;
+    }
+
+    .box button{
+        margin: 20px 50px 0 50px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .box input{
+        width: 378px;
+        padding: 0;
+    }    
 }

@@ -2,22 +2,23 @@ import React from "react";
 import './Header.css';
 import MenuListComposition from "../assets/MenuList";
 import pactech from '../assets/img/pactech2.png';
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function Header() {
     const cachedUser = localStorage.getItem('usuario');
+    const navigate = useNavigate();
 
+    const home = () => {
+        navigate('/');
+    };
     return (
         <header className="header">
             <div className="name">
-                <Link to='/' className="link">
-                    <img src={pactech} alt="Logo" className="logo" />
-                    <h2>Announces</h2>
-                </Link>
-
+                <img src={pactech} alt="Logo" className="logo" onClick={home} />
+                <h2>Announces</h2>
             </div>
             <div className="button_login">
-                <h2>Welcome {cachedUser}</h2>
+                <h2>{cachedUser ? cachedUser : "Welcome"}</h2>
                 <MenuListComposition />
             </div>
         </header>

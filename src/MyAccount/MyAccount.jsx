@@ -8,19 +8,18 @@ export default function MyAccount() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
-  const baseUrl = 'http://15.229.4.24:3002'
+  const baseUrl = "http://15.229.4.24:3002"
 
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await Axios.get(`${baseUrl}/add/userproduct`, {
           headers: {
-            Authorization: token
+            Authorization: token,
           }
         });
 
         setProductList(response.data.products);
-        console.log('Producst:list', response.data.products);
       } catch (err) {
         console.log(err);
         setError('Failed to retrieve user products');
@@ -60,10 +59,10 @@ export default function MyAccount() {
           <button onClick={() => navigate('/add-advertise')}> Add an advertise </button>
         </div>
         <div className="add-header">
-          <h4 className='pic'>Picture</h4>
+          <h4 className='picbox'>Picture</h4>
           <h4 className='title'>Title</h4>
           <h4 className='price'>Price</h4>
-          <h4 className='act '>Actions</h4>
+          <h4 className='state'>Actions</h4>
         </div>
         {error ? (
           <div className="error-message">{error}</div> // render error message if error state is not null
@@ -71,7 +70,9 @@ export default function MyAccount() {
           <div className="product">
             {productList.map(product => (
               <div key={product.id} className="product-row">
-                <img src={`${baseUrl}/${product.picPath}`} alt={product.name} className="pic" />
+                <div className='picbox'>
+                <img src={product.image} alt={product.name} className="pic" />
+                </div>
                 <h4 className='title'>{product.name}</h4>
                 <p className='price'>R${product.price}</p>
                 <div className='act'>

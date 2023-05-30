@@ -8,7 +8,7 @@ import pactech from '../assets/img/pactech2.png';
 export const signOut = () => {
     localStorage.removeItem('usuario');
     localStorage.removeItem('token');
-    window.location.href = "advertise.pactech.dev.br/Login";
+    window.location.href = "/Login";
 };
 
 
@@ -28,13 +28,12 @@ function Login() {
             }).then((response) => {
                 setUser(response.data);
                 localStorage.setItem('usuario', response.data.user.name);
-                console.log(response.data);
                 localStorage.setItem('token', `Bearer ${response.data.token}`);
             });
         };
     };
     if (user) {
-        window.location.href = "advertise.pactech.dev.br/";
+        window.location.href = "/";
     }
 
 

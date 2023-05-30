@@ -1,4 +1,13 @@
 .paper {
   position: absolute;
-  margin-top: 27px; /* distância do topo */
+  margin-top: 27px;
+  /* distância do topo */
+  margin-left: -100px
+}
+
+@media screen and (max-width: 450px) {
+  .paper {
+    margin-top: 0px;
+    margin-left: 0px;
   }
+}

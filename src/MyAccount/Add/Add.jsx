@@ -49,7 +49,7 @@ function Add() {
                     <form action="">
 
                         <h4>Title</h4>
-                        <input
+                        <input                   
                             type="text" value={nameReg}
                             onChange={e => setNameReg(e.target.value)}
                         />
@@ -65,9 +65,7 @@ function Add() {
                             <option value="">Select a status</option>
                             <option value="Motherboard">Motherboard</option>
                             <option value="GPU">GPU</option>
-                            <option value="Hard drive">Hard drive</option>
                             <option value="RAM">RAM</option>
-                            <option value="CPU">CPU</option>
                         </select>
 
                         <h4>Product status</h4>

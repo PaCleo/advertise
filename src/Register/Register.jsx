@@ -17,7 +17,7 @@ function Register() {
                 password: PasswordReg,
 
             }); 
-            window.location.href = "advertise.pactech.dev.br/Login";
+            window.location.href = "/Login";
         } catch(err) {
                 onsole.log(err);
                 setError('Failed to remove product');

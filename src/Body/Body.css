@@ -1,3 +1,7 @@
+/*
+    All the css of body are in the MyAccount.css and all the buttons are in Edit.css
+*/
+
 .search button {
     margin-top: 8px;
     margin-left: 20px;
@@ -14,6 +18,7 @@
 .advancedsearch {
     display: flex;
 }
-.picbox{
+
+.picbox {
     width: 200px;
 }

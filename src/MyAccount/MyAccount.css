@@ -95,16 +95,56 @@
     .max-limit{
         margin: 50px 60px;
     }
+    .add{
+        margin: 0 100px;
+    }
+    .add button{
+        margin-bottom: 15px;
+    }
+    .advancedsearch{
+        margin: 0 100px;
+    }
+    .add-header, .product {
+        margin: 0 0 0 100px;
+    }
+
+    
 }
 
 @media screen and (max-width: 768px) {
     .max-limit {
         margin: 10px 0px;
     }
-    .pic{
-        display: none;
-    }
     .title{
         width: 400px;
+    }
+    .add-header, .product{
+        margin: 0;
+    }
+    .add{
+        margin-left: 10px;
+    }
+
+    .advancedsearch button{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .advancedsearch{
+        margin: 0px 15px;
+        flex-direction: column;
+    }
+
+    .advancedsearch button{
+        margin-left: 0px;
+        justify-content: center;
+    }
+
+    .title{
+        width: 200px;
+    }
+    .state{
+        width: 100px;
     }
 }

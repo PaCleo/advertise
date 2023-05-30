@@ -13,7 +13,7 @@ function Edit() {
     const token = localStorage.getItem('token');
     const [successMsg, setSuccessMsg] = useState("");
     const [unsuccesMsg, setUnsuccesMsg] = useState("");
-    const baseURL = "http://15.229.4.24:3002"
+    const baseURL = "http://15.229.4.24:3002";
 
     useEffect(() => {
         async function getProduct() {
@@ -53,12 +53,18 @@ function Edit() {
             formData.append('state', stateReg);
             formData.append('image', image);
 
+            const config = {
+                headers: {
+                    Authorization: token,
+                    'Content-Type': 'multipart/form-data'
+                }
+            };
+
             const response = await Axios.patch(
                 `http://15.229.4.24:3002/add/product/${id}`,
                 formData,
-                { headers: { Authorization: token } }
+                config
             );
-            console.log(response.data);
             setSuccessMsg("Product updated successfully!");
         } catch (err) {
             console.log(err);
@@ -96,6 +102,7 @@ function Edit() {
                         <h4>Image</h4>
                         <input
                             type="file"
+                            name="image"
                             onChange={handleImageChange}
                         />
 

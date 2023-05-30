@@ -28,7 +28,6 @@ function Body() {
             });
 
             setProductList(response.data.products);
-            console.log('Producst:list', response.data.products);
         } catch (err) {
             console.log(err);
             setError('Failed to retrieve user products');
